@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gahoot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create.css">
+    <script src="create.js" async></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img class="icon" src="icon.png"></a>
+        <input id="quiz-title" type="text" placeholder="Skriv titel">
+        <div class="create-button-container">        
+            <p class="create-error-message">Fyll i alla fält</p>
+            <a href="index.html"><button class="create-button" onclick="createQuiz()">Spara</button></a>
+        </div>
+    </nav>
+
+    <div id="main">
+        <div id="questions-container">
+            <div id="question-box"></div>
+            <button id="add-question">Lägg till fråga</button>
+        </div>
+
+        <div id="create-container">
+            <input id="question1" class="question" type="text" placeholder="Skriv din fråga">
+            <div class="answer-container">
+                <input id="q1a1" class="answer" type="text" placeholder="Skriv svar 1">
+                <div class="right-button-container" style="margin-right: 1%">
+                    <button id="q1r1" class="right-button" onclick="setAnswer1(1)"></button>
+                </div>
+
+                <input id="q1a2" class="answer" type="text" placeholder="Skriv svar 2">
+                <div class="right-button-container">
+                    <button id="q1r2" class="right-button" onclick="setAnswer1(2)"></button>
+                </div>
+
+                <input id="q1a3" class="answer" type="text" placeholder="Skriv svar 3">
+                <div class="right-button-container"  style="margin-right: 1%">
+                    <button id="q1r3" class="right-button" onclick="setAnswer1(3)"></button>
+                </div>
+
+                <input id="q1a4" class="answer" type="text" placeholder="Skriv svar 4">
+                <div class="right-button-container">
+                    <button id="q1r4" class="right-button" onclick="setAnswer1(4)"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-container"></div>
+    </div>
+</body>
+</html>

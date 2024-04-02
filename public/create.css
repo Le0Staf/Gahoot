@@ -1,0 +1,131 @@
+#quiz-title {
+    width: 500px;
+    height: 45px;
+    padding-inline: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.create-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.create-error-message {
+    color: red;
+    margin-right: 50px;
+}
+
+#main {
+    height: 92.5vh;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
+    padding-block: 0vh;
+    margin-top: 0;
+}
+
+#questions-container {
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(48, 15, 97);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: start;
+}
+
+#create-container {
+    width: 65%;
+    height: 100%;
+    background-color: rgb(70, 23, 143);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.question {
+    width: 95%;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.answer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.answer {
+    width: 37.25%;
+    height: 80px;
+    margin-block: 4px;
+    border-radius: 5px 0px 0px 5px;
+    padding-inline: 2.5%;
+    font-size: 20px;
+    border: none;
+}
+
+.right-button-container {
+    width: 5%;
+    height: 80px;
+    background-color: white;
+    margin-block: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.right-button {
+    width: 70%;
+    border: 2px solid black;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.right-button:hover {
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+    width: 71%;
+}
+
+#settings-container {
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: -5px 5px 5px rgb(48, 15, 97);
+    z-index: 2;
+}
+
+#question-box {
+    width: 75%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+
+#add-question {
+    width: 75%;
+    height: 50px;
+    background-color: rgb(70, 119, 192);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 5px rgb(50, 85, 138);
+}
+
+#add-question:hover {
+    cursor: pointer;
+    background-color: rgb(50, 85, 138);
+}
