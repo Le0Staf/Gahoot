@@ -4,7 +4,7 @@ const q1a1 = document.getElementById("q1a1");
 const q1a2 = document.getElementById("q1a2");
 const q1a3 = document.getElementById("q1a3");
 const q1a4 = document.getElementById("q1a4");
-const server = "http://10.155.16.253:3000";
+const server = "http://192.168.38.172:3000";
 
 let rightAnswer1;
 

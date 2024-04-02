@@ -1,5 +1,5 @@
 const quizContainer = document.getElementById("main");
-const server = "http://10.155.16.253:3000";
+const server = "http://192.168.38.172:3000";
 
 latestArrayLength = 0;
 
@@ -14,10 +14,10 @@ function getText() {
             for (i = latestArrayLength; i < array.length; i++) {
                 quizContainer.innerHTML += 
                 `
-                <div class="quiz">
-                    <div class="quiz-color"></div>
-                    <a href="#" class="quiz-name">${array[i][0]}</a>
-                </div>
+
+                <a href="#" class="quiz">
+                    <p href="#" class="quiz-name">${array[i][0]}</p>
+                </a>
                 `; 
             }
             latestArrayLength = array.length;
