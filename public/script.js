@@ -3,6 +3,8 @@ const server = "http://192.168.38.172:3000";
 
 latestArrayLength = 0;
 
+getText();
+
 function getText() {
     xmlhttp = new XMLHttpRequest();
 
@@ -15,7 +17,7 @@ function getText() {
                 quizContainer.innerHTML += 
                 `
 
-                <a href="#" class="quiz">
+                <a onclick="StartGame()" href="game.html" class="quiz">
                     <p href="#" class="quiz-name">${array[i][0]}</p>
                 </a>
                 `; 
@@ -26,7 +28,15 @@ function getText() {
     xmlhttp.send();
 }
 
+function StartGame() {
+    fetch('/start_game')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => console.error('Error:', error));
+}
+
 const interval = setInterval(function() {
-    console.log("Fortnite");
     getText();
 }, 1000);

@@ -10,6 +10,8 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//Quiz Database
+
 let db = new sqlite3.Database('./database.db', (err) => {
     if (err) {
       console.error(err.message);
@@ -55,6 +57,22 @@ app.get('/text', (req, res) => {
         res.send(messages)
         });
     });  
+})
+
+//Game Database
+
+let db2 = new sqlite3.Database('./game.db', (err) => {
+  if (err) {
+    console.error(err.message);
+   }
+  console.log('Connected to the database2.');
+});
+
+app.post('/send2', (req, res) => {
+  db2.serialize(() => {
+    db2.run('INSERT INTO game(quizId, p1, p1Score) VALUES(?, ?, ?)', [`${req.body["quizId"]}`, `${req.body["p1"]}`, `${req.body["p1Score"]}`]); 
+  });
+  res.send('200');
 })
 
 app.listen(port, () => {
